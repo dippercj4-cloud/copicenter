@@ -318,7 +318,7 @@ function observeRevealElements() {
         entry.target.classList.add('is-visible');
         observer.unobserve(entry.target);
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0 });
   }
 
   revealTargets.forEach((target) => {

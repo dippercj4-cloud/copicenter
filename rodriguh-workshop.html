@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rodriguh Workshop: mantenimiento de computadores, Linux, sistemas operativos y soporte tecnológico con identidad oscura y tecnológica."
+    />
+    <meta name="theme-color" content="#080B12" />
+    <title>Rodriguh Workshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/rodriguh-workshop.css" />
+    <script defer src="scripts/rodriguh-workshop.js"></script>
+  </head>
+  <body>
+    <header class="rw-header">
+      <div class="container rw-nav">
+        <a class="rw-brand" href="./index.html" aria-label="Volver a Copicenter">
+          <span class="rw-brand-mark">RW</span>
+          <span>Rodriguh Workshop</span>
+        </a>
+
+        <nav class="rw-nav-links" aria-label="Navegación del taller">
+          <a href="#inicio">Inicio</a>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#carrito">Carrito</a>
+          <a href="#sobre">Sobre</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="rw-hero" id="inicio">
+        <div class="container rw-hero-grid">
+          <div>
+            <p class="rw-kicker">Tu tecnología, tus reglas, tus instintos</p>
+            <h1>Soporte técnico práctico para equipos, Linux y exploración digital.</h1>
+            <p class="rw-intro">
+              Rodriguh Workshop combina soporte técnico básico, mantenimiento de computadores,
+              preparación de sistemas operativos, orientación Linux y un enfoque cercano para usuarios
+              con interés en tecnología, cultura furry y configuración personal.
+            </p>
+
+            <div class="rw-hero-actions">
+              <a class="rw-button rw-button-primary" href="#catalogo">Ver servicios</a>
+              <a class="rw-button rw-button-secondary" href="./index.html">Volver a Copicenter</a>
+            </div>
+          </div>
+
+          <div class="rw-terminal-panel" aria-label="Resumen del taller">
+            <div class="rw-terminal-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <pre>~$ whoami
+rodiguh
+
+~$ uname -a
+Linux lab // x86_64
+
+~$ ls services
+mantenimiento/
+soporte/
+linux-lab/
+hardware/
+</pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="container rw-section" id="sobre">
+        <div class="rw-section-heading">
+          <p class="rw-kicker">Sobre el taller</p>
+          <h2>Arquitectura digital con criterio humano.</h2>
+        </div>
+
+        <div class="rw-feature-grid">
+          <article class="rw-feature-card">
+            <h3>Computadores</h3>
+            <p>Limpieza, revisión física, orden de conexiones y apoyo básico para equipos personales o de trabajo.</p>
+          </article>
+          <article class="rw-feature-card">
+            <h3>Sistemas</h3>
+            <p>Preparación de medios, instalación de sistemas compatibles y configuración inicial segura.</p>
+          </article>
+          <article class="rw-feature-card">
+            <h3>Linux Lab</h3>
+            <p>Orientación para usuarios principiantes, instalaciones de distribuciones que el operador domine y ajustes básicos.</p>
+          </article>
+          <article class="rw-feature-card">
+            <h3>Personalización</h3>
+            <p>Temas, recursos existentes y configuración de escritorios con una identidad tecnológica y furry.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="rw-catalog-section" id="catalogo">
+        <div class="container rw-catalog-shell">
+          <div class="rw-section-heading left">
+            <p class="rw-kicker">Catálogo</p>
+            <h2>Servicios disponibles</h2>
+          </div>
+
+          <div class="rw-layout">
+            <div class="rw-catalog-panel">
+              <div id="rw-catalog" class="rw-catalog-grid" aria-live="polite"></div>
+            </div>
+
+            <aside class="rw-cart-panel" id="carrito" aria-label="Carrito del taller">
+              <div class="rw-cart-header">
+                <h3>Carrito</h3>
+                <button id="rw-clear-cart" class="rw-link-button" type="button">Vaciar</button>
+              </div>
+
+              <div id="rw-cart-items" class="rw-cart-items" aria-live="polite"></div>
+
+              <div class="rw-cart-summary">
+                <div class="rw-summary-row">
+                  <span>Total definido</span>
+                  <strong id="rw-cart-total">$0</strong>
+                </div>
+                <div class="rw-summary-row pending">
+                  <span>Por cotizar</span>
+                  <strong id="rw-pending-count">0</strong>
+                </div>
+                <div class="rw-summary-row">
+                  <span>Artículos</span>
+                  <strong id="rw-item-count">0</strong>
+                </div>
+              </div>
+
+              <div class="rw-cart-actions">
+                <button id="rw-export-image" class="rw-button rw-button-primary" type="button">
+                  Exportar pedido como imagen
+                </button>
+                <p class="rw-cart-note">El presupuesto es estimado y requiere confirmación cuando corresponda.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rw-footer">
+      <div class="container rw-footer-wrap">
+        <p>Rodriguh Workshop</p>
+        <a href="./index.html">Volver a Copicenter</a>
+      </div>
+    </footer>
+  </body>
+</html>

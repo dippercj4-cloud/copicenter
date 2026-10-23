@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Copicenter ofrece impresiones, documentos, diseño gráfico y soporte tecnológico con Rodrigoh Workshop."
+    />
+    <meta name="theme-color" content="#16834A" />
+    <title>Copicenter | Impresión, documentos y tecnología</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script defer src="scripts/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#inicio" class="brand" aria-label="Volver al inicio">
+          <span class="brand-mark">C</span>
+          <span>Copicenter</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#catalogo">Catálogo</a>
+          <a href="./rodriguh-workshop.html">Rodriguh Workshop</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <a class="button button-primary" href="#catalogo">Solicitar información</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero theme-copicenter" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Soluciones para documentos y tecnología</p>
+            <h1>Impresión, diseño y soporte práctico para tu negocio o tu día a día.</h1>
+            <p class="lead">
+              En Copicenter combinamos rapidez, organización y atención cercana para ayudarte con
+              impresiones, trámites, documentos, diseño y soluciones tecnológicas.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#catalogo">Ver catálogo</a>
+              <button class="button button-secondary" type="button" data-open-whatsapp>
+                Hablar por WhatsApp
+              </button>
+            </div>
+
+            <ul class="hero-stats" aria-label="estadísticas del servicio">
+              <li><strong>+500</strong><span>proyectos</span></li>
+              <li><strong>24 h</strong><span>atención rápida</span></li>
+              <li><strong>100%</strong><span>soporte cercano</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-card" aria-label="Resumen del servicio destacado">
+            <div class="card-badge">Servicio destacado</div>
+            <h2>Todo lo que tu empresa necesita</h2>
+            <ul>
+              <li>Impresión digital</li>
+              <li>Fotocopias y escaneo</li>
+              <li>Diseño gráfico</li>
+              <li>Soporte tecnológico</li>
+            </ul>
+            <div class="mini-price">
+              <span>Desde</span>
+              <strong>$15.000</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog-section section" id="catalogo">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-green">Catálogo comercial</p>
+            <h2>Selecciona los servicios que necesitas.</h2>
+          </div>
+
+          <div class="catalog-layout">
+            <div class="catalog-panel">
+              <div class="toolbar" aria-label="Buscador y filtros">
+                <label class="search-field">
+                  <span class="sr-only">Buscar servicio</span>
+                  <input id="catalog-search" type="search" placeholder="Buscar por nombre del servicio" />
+                </label>
+
+                <label class="filter-field">
+                  <span class="sr-only">Filtrar por categoría</span>
+                  <select id="category-filter">
+                    <option value="all">Todas las categorías</option>
+                  </select>
+                </label>
+              </div>
+
+              <div id="catalog-list" class="service-grid" aria-live="polite"></div>
+              <div id="catalog-empty" class="empty-state hidden" aria-live="polite">
+                No se encontraron servicios con esos criterios.
+              </div>
+            </div>
+
+            <aside class="cart-panel" aria-label="Carrito de compras">
+              <div class="cart-header">
+                <h3>Carrito</h3>
+                <button id="clear-cart" class="link-button" type="button">Vaciar</button>
+              </div>
+
+              <div id="cart-items" class="cart-items"></div>
+
+              <div class="cart-summary">
+                <div class="summary-line">
+                  <span>Subtotal</span>
+                  <strong id="cart-subtotal">$0</strong>
+                </div>
+                <div class="summary-line warning">
+                  <span>Pedido pendiente</span>
+                  <strong id="manual-items-count">0</strong>
+                </div>
+              </div>
+
+              <div class="cart-actions">
+                <button id="export-cart-image" class="button button-secondary" type="button">
+                  Exportar pedido como imagen
+                </button>
+                <button id="prepare-whatsapp" class="button button-primary" type="button">
+                  Preparar pedido por WhatsApp
+                </button>
+                <p class="cart-note">
+                  El pedido no queda confirmado hasta que se confirme la conversación por WhatsApp.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section info-strip">
+        <div class="container info-grid">
+          <div class="info-card">
+            <span class="info-mark">📍</span>
+            <div>
+              <h3>Ubicación</h3>
+              <p>Se confirma la dirección del negocio en la etapa de apertura comercial.</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-mark">🕒</span>
+            <div>
+              <h3>Horarios</h3>
+              <p>Se informarán los horarios de atención y disponibilidad del servicio.</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-mark">🔐</span>
+            <div>
+              <h3>Privacidad</h3>
+              <p>No se solicitarán datos sensibles dentro del catálogo ni del carrito.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="container faq-shell">
+          <div class="section-heading left">
+            <p class="eyebrow eyebrow-green">Preguntas frecuentes</p>
+            <h2>Todo lo que necesitas saber antes de solicitar un servicio.</h2>
+          </div>
+
+          <div class="faq-list">
+            <details open>
+              <summary>¿Los precios mostrados son definitivos?</summary>
+              <p>
+                Los servicios con precio fijo y por unidad tienen un valor visible. Los servicios con la etiqueta
+                “Precio por cotizar” requieren revisión antes de confirmar un importe.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿Qué pasa si un servicio necesita cotización manual?</summary>
+              <p>
+                Se conserva en el carrito como un servicio pendiente y se incluye en el mensaje de WhatsApp para
+                revisar los detalles antes de confirmar una tarifa final.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿Qué significa preparar un pedido por WhatsApp?</summary>
+              <p>
+                Es una solicitud comercial preliminar. No reemplaza la confirmación final del negocio ni la
+                conversación directa con el cliente.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacto">
+      <div class="container footer-wrap">
+        <div class="footer-contact">
+          <div>
+            <p class="footer-brand">Contacto Copicenter</p>
+            <p>Escríbenos directamente por WhatsApp y envía tu pedido.</p>
+            <a class="footer-phone" href="https://wa.me/573243767360" target="_blank" rel="noopener">
+              WhatsApp: +57 324 376 7360
+            </a>
+          </div>
+
+          <div class="contact-actions">
+            <button id="contact-whatsapp" class="button button-primary" type="button">
+              Enviar pedido por WhatsApp
+            </button>
+            <p class="contact-note">
+              Se abrirá el WhatsApp del receptor con el resumen del pedido. La imagen del carrito se descargará
+              para que puedas adjuntarla en el chat.
+            </p>
+            <p id="contact-alert" class="contact-alert" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="#catalogo">Catálogo</a>
+          <a href="./rodriguh-workshop.html">Rodriguh Workshop</a>
+          <a href="#faq">FAQ</a>
+          <a href="#inicio">Volver arriba</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

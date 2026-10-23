@@ -1,0 +1,5 @@
+/target/
+/.copicenter-data/
+/.env
+/.env.*
+!.env.example

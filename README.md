@@ -1,8 +1,11 @@
 # Copicenter
 
+
 Proyecto comercial para Copicenter con foco en servicios de impresión, documentos, diseño y soporte tecnológico. La solución está pensada como sitio estático compatible con GitHub Pages, con una identidad visual clara para la marca principal y una sección independiente para Rodriguh Workshop.
 
+
 ## Estructura
+
 
 - `index.html`: contenido principal de la landing page.
 - `styles/styles.css`: sistema visual de Copicenter y Rodriguh Workshop.
@@ -10,49 +13,54 @@ Proyecto comercial para Copicenter con foco en servicios de impresión, document
 - `assets/favicon.svg`: icono de la marca.
 - `src/main.rs`: punto de entrada Rust para mantener la compilación del proyecto.
 
+
 ## Compilación local
+
 
 1. Instala Rust y Cargo.
 2. Desde la raíz del proyecto ejecuta:
+
 
 ```bash
 cargo build
 ```
 
+
 3. Para visualizar la interfaz localmente:
+
 
 ```bash
 python3 -m http.server 8000
 ```
 
+
 Y abre la URL:
+
 
 ```text
 http://localhost:8000/copicenter/
 ```
 
+
 ## Contacto comercial
+
 
 El número de WhatsApp del receptor se configura en `scripts/app.js` y se muestra en la sección Contacto. El botón de contacto abre el chat con el resumen del carrito y descarga la imagen para adjuntarla:
 
+
 ```js
 const COMMERCIAL_CONFIG = {
-  whatsappNumber: "573243767360",
+  whatsappNumber: "573000290582",
   businessName: "Copicenter"
 };
 ```
 
+
 Al abrir WhatsApp, adjunta manualmente la imagen descargada para enviarla junto con el pedido.
+
 
 ## Publicación en GitHub Pages
 
+
 1. Sube este repositorio a GitHub.
 2. En la configuración del repositorio, habilita GitHub Pages con la rama principal o con la carpeta de salida que corresponda.
-3. Mantén el proyecto como sitio estático para evitar dependencias de un backend Rust en tiempo de ejecución.
-4. Verifica que los enlaces y rutas relativas funcionen correctamente con el prefijo del repositorio.
-
-## Notas
-
-- El catálogo y el carrito se mantienen en una única fuente de datos para evitar duplicaciones.
-- Los servicios con precio variable, "Desde" o cotización manual se marcan como pendientes de cotización.
-- El resumen del carrito se puede exportar o compartir como imagen junto con la solicitud de WhatsApp.

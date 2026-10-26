@@ -1,5 +1,5 @@
 const COMMERCIAL_CONFIG = {
-  whatsappNumber: "573243767360",
+  whatsappNumber: "573000290582",
   businessName: "Copicenter",
   note: "El pedido no queda confirmado hasta que se confirme la conversación por WhatsApp."
 };
